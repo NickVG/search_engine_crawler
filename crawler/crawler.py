@@ -280,5 +280,5 @@ if __name__ == "__main__":
 
     publish_url(args.url)
     channel.basic_consume(callback,
-                      queue=mqqueue)
+                      queue='crawler')
     channel.start_consuming()
