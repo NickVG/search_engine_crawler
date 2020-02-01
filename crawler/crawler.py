@@ -279,5 +279,5 @@ if __name__ == "__main__":
     prometheus_client.start_http_server(8000)
 
     publish_url(args.url)
-    channel.basic_consume(queue='crawler', callback, no_ack=True)
+    channel.basic_consume(callback, queue='crawler', no_ack=True)
     channel.start_consuming()
